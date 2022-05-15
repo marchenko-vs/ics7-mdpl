@@ -5,7 +5,7 @@
 #define ITERATIONS 1e7
 
 template <typename Type>
-void time_mesurement_cpp(unsigned int times, Type a, Type b)
+void time_measurement_cpp(unsigned int times, Type a, Type b)
 {
     Type result;
 
@@ -27,7 +27,7 @@ void time_mesurement_cpp(unsigned int times, Type a, Type b)
 }
 
 template <typename Type>
-void time_mesurement_asm(unsigned int times, Type a, Type b)
+void time_measurement_asm(unsigned int times, Type a, Type b)
 {
     Type result;
 
@@ -63,9 +63,9 @@ void time_mesurement_asm(unsigned int times, Type a, Type b)
 }
 
 #ifdef ASM
-#define TIME_MEASUREMENT(Type) time_mesurement_asm<Type>
+#define TIME_MEASUREMENT(Type) time_measurement_asm<Type>
 #else
-#define TIME_MEASUREMENT(Type) time_mesurement_cpp<Type>
+#define TIME_MEASUREMENT(Type) time_measurement_cpp<Type>
 #endif
 
 int main()
