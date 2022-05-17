@@ -2,7 +2,7 @@ CC := gcc
 SRC_DIR := src/
 INC_DIR := inc/
 OUT_DIR := out/
-CFLAGS := -std=c++20 -I$(INC_DIR) -masm=intel -g3
+CFLAGS := -std=c++20 -I$(INC_DIR) -masm=intel
 
 app.exe: $(OUT_DIR)main.o $(OUT_DIR)vector.o
 	$(CC) $^ -o app.exe
